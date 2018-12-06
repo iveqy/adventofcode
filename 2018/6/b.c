@@ -92,17 +92,11 @@ int main()
 	for (int i = 0; i < COLS; i++) {
 		for (int j = 0; j < COLS; j++) {
 			int dist = 0;
-			for (int k = 0; k < LEN; k++) {
+			for (int k = 0; k < LEN; k++)
 				dist += cdist(j, i, coords[k].x, coords[k].y);
-			}
-			int val = '.' - 97;
-			if (dist < 10000) {
-				val = '#' - 97;
+			if (dist < 10000)
 				size++;
-			}
-			//printf("%c", val + 97);
 		}
-		//printf("\n");
 	}
 	printf("size: %d\n", size);
 	return 0;
